@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-3.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <!--/*
+        <script src="http://cdn.jsdelivr.net/webjars/jquery/3.3.7-1/jquery.min.js"
+                th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    */-->
+    <title>blue-green app</title>
+
+    <style type="text/css">
+        .blue {
+            background: #7cc4ff;
+        }
+
+        .green {
+            background: #b2ffa7;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron" th:classappend="${color}">
+        <p class="text-center" style="font-size: 90px; color: #3f3f3f"><strong th:text="${color}">blue</strong></p>
+        <p class="text-center">
+            <small th:text="${host}">host</small>
+        </p>
+    </div>
+</div>
+</body>
+</html>
